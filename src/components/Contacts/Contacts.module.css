@@ -29,7 +29,8 @@
   text-transform: capitalize;
 }
 
-.formInput:focus-within {
+.formInput:focus-within,
+.formInputName:focus-within {
   outline-color: tomato;
   transform: scale(1.1);
 }
