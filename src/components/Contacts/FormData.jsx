@@ -38,7 +38,7 @@ export const FormData = ({ onFormSubmit }) => {
           </label>
         </div>
         <Field
-          className={css.formInput}
+          className={css.formInputName}
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"

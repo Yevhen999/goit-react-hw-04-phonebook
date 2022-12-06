@@ -18,10 +18,15 @@
   display: block;
 }
 
-.formInput {
+.formInput,
+.formInputName {
   margin-top: 10px;
   display: block;
   border-radius: 3px;
+}
+
+.formInputName {
+  text-transform: capitalize;
 }
 
 .formInput:focus-within {
