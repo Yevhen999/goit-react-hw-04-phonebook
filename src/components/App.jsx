@@ -34,18 +34,18 @@ class App extends Component {
 
   formSubmitHandler = data => {
     const { name, number } = data;
+    for (const contact of this.state.contacts) {
+      if (name.toLowerCase() === contact.name.toLowerCase()) {
+        alert(`${name} is already in contacts`);
+        return;
+      }
+    }
+
     const newContact = {
       id: nanoid(5),
       name,
       number,
     };
-
-    for (const contact of this.state.contacts) {
-      if (newContact.name.toLowerCase() === contact.name.toLowerCase()) {
-        alert(`${newContact.name} is already in contacts`);
-        return;
-      }
-    }
 
     this.setState(curState => {
       return { contacts: [newContact, ...curState.contacts] };
